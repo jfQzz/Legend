@@ -1,0 +1,133 @@
+<!--index.wxml-->
+<scroll-view class="container">
+  <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" indicator-active-color="#fff" indicator-color="rgba(255, 255, 255, .5)" class='sw-height' >
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"  />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='wide-line-no-margin' />
+  <!-- <view class='center-row'>
+    <view class='black_line-left' />
+    <view class='spot' />
+    <text class='blue-txt'>询价</text>
+    <view class='spot' />
+    <view class='black_line-right' />
+  </view> -->
+  <view class='title-gv'>
+   <image class="titel-bg"src='/img/ic_title_bg.png' mode='scaleToFill'></image>
+   <text class='blue-txt'>询价</text>
+  </view>
+
+  <view class='gray-line-top' />
+  <!-- <view class="ticket-select-gr-type">
+    <block wx:key="index" wx:for='{{ticketType}}'>
+      <text wx:if="{{index==selectTicketTypeIndex}}" class="selected-txt-color" bindtap='onTicketTypeSelect' id='{{index}}'>{{item}}</text>
+      <text wx:else class='normal-txt-color' bindtap='onTicketTypeSelect' id='{{index}}'>{{item}}</text>
+    </block>
+  </view> -->
+
+<view class='tab-gr'>
+            <view class="{{selectTicketTypeIndex==0? 'tab-item-select' : 'tab-item-normal' }}" id="0" bindtap="onTicketTypeSelect">银票</view>
+            <view class="{{selectTicketTypeIndex==1? 'tab-item-select' : 'tab-item-normal' }}" id="1" bindtap="onTicketTypeSelect">商票</view>
+          </view>
+
+  <!-- <view class='line-no-margintop' /> -->
+  <view class="select-gr-ticket">
+  <image class='mark' src='/img/ic_mark.png'></image>
+    <text class='hint-ticket'>票据介质</text>
+    <block wx:key="index" wx:for='{{tickets}}'>
+      <text wx:if="{{index==selectTicketIndex}}" class="selected-button-ticket" bindtap='onTicketSelect' id='{{index}}'>{{item}}</text>
+      <text wx:else class='normal-button-ticket' bindtap='onTicketSelect' id='{{index}}'>{{item}}</text>
+    </block>
+  </view>
+  <view class='gray-line' />
+  <view class="ticket-select-gr" wx:if="{{0==selectTicketTypeIndex}}">
+  <view class="hint-gv">
+  <image class='mark' src='/img/ic_mark.png'></image>
+    <text class='hint-bank'>承兑行</text>
+  </view>
+    <view class='select-gr'>
+      <block wx:key="index" wx:for='{{banks}}'>
+        <text wx:if="{{index==selectBankIndex}}" class="selected-button" bindtap='onBankSelect' id='{{index}}'>{{item}}</text>
+        <text wx:else class='normal-button' bindtap='onBankSelect' id='{{index}}'>{{item}}</text>
+      </block>
+    </view>
+  </view>
+  <view class='gray-line' wx:if="{{0==selectTicketTypeIndex}}" />
+
+  <view class="ticket-select-gr">
+   <image class='mark' src='/img/ic_mark.png'></image>
+    <text class="hint">票面金额</text>
+    <input class="input" type="number" placeholder="请输入票面金额" bindinput='onAmtInput'value="{{inputValue}}"/>
+    <text class='txt'>万元</text>
+  </view>
+  <view class='gray-line' />
+
+  <view class="ticket-select-gr">
+   <image class='mark' src='/img/ic_mark.png'></image>
+    <text class="hint">票据到期日</text>
+    <picker mode="date" value="{{date}}" start="2018-08-15" end="2200-09-01" bindchange="onDateChange">
+      <view class="{{ '请选择票据到期日' == date? 'normal-time':'select-time'}}">{{date}}</view>
+    </picker>
+
+  </view>
+  <view class='gray-line' />
+  <view class="ticket-select-gr" wx:if="{{1==selectTicketTypeIndex}}">
+   <image class='mark' src='/img/ic_mark.png'></image>
+    <text class="hint">承兑人全称</text>
+    <input class="input" type="text" placeholder="请输入承兑人全称" bindinput='onConfirmerInput' />
+  </view>
+  <view class='gray-line' wx:if="{{1==selectTicketTypeIndex}}" />
+  <view class="select-gr">
+   <image class='mark' src='/img/ic_mark.png'></image>
+    <text class="hint">上传票面照片</text>
+    <image wx:if="{{imageOne}}" class="select-pic" data-src="{{imageOne}}" bindtap="previewImage" src='{{imageOne}}'></image>
+    <image wx:if="{{imageOne}}" class='delete-pic' src='/img/ic_delete.png' bindtap='deletePic' data-id='0'></image>
+    <image wx:if="{{imageTwo}}" class="select-pic" data-src="{{imageTwo}}" bindtap="previewImage" src='{{imageTwo}}'></image>
+    <image wx:if="{{imageTwo}}" class='delete-pic' src='/img/ic_delete.png' bindtap='deletePic' data-id='1'></image>
+    <view wx:if="{{!imageOne}}" class="weui-uploader__bd">
+
+      <view class="weui-uploader__files">
+        <view class="weui-uploader__input-box">
+          <view class="weui-uploader__input" bindtap="pickImage"></view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <button class='button-find' bindtap='onFind'>立即询价</button>
+  <text class="ad-desc">专业融资顾问随时待命，为您提供高效对接服务</text>
+  <view class="center-row ">
+    <image class='icon' src='/img/ic_phone.png' />
+    <text class='phone'>400-999-2278</text>
+  </view>
+
+  <view class='wide-line' />
+  <view class='title-gv'>
+   <image class="titel-bg"src='/img/ic_title_bg.png' mode='scaleToFill'></image>
+   <text class='blue-txt'>合作企业</text>
+  </view>
+    <view class='line-space'></view>
+  <image class='partner-img' src='/img/bg_partner.png' mode='scaleToFill'></image>
+  <view class='wide-line' />
+
+
+  <view class='title-gv'>
+   <image class="titel-bg"src='/img/ic_title_bg.png' mode='scaleToFill'></image>
+   <text class='blue-txt'>平台优势</text>
+  </view>
+      <view class='line-space'></view>
+  <view class='select-gr-bottom'>
+    <block wx:key="index " wx:for='{{adSpecial}}'>
+      <view class='ad-gr'>
+
+        <image class='ad-img' src='{{item.img}}' mode='widthFix'></image>
+        <text class='ad-hint'>{{item.title}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='bottom-line'></view>
+</scroll-view>

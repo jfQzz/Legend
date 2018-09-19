@@ -1,0 +1,14 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+<text class='title'>快捷登录</text>
+<view class='gray_border'>
+  <input class="input" type="number" maxlength="11" placeholder="请输入手机号" bindinput="onPhoneInput"/>
+</view>
+<view class='gray_border'>
+    <input class="input-code" type="number" maxlength="4" placeholder="请输入验证码" bindinput='onCodeInput' />
+    <text class='code' bindtap='onGetCode'>{{countDownNum}}</text>
+    </view>
+      <button class="{{1 == loginMark ? 'ok':'button-login'}}"bindtap='onLogin' loading='{{isLogin}}'>{{loginHint}}</button>
+<text class='hint'>新用户首次登录将自动完成注册</text>
+</view>
+

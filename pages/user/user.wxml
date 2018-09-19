@@ -1,0 +1,25 @@
+<!--pages/user/user.wxml-->
+<view class="contain">
+<!-- style="background-image: url(/img/bg_top_header.png)" -->
+	<view class="userinfo" bindtap="onLogin" >
+   <image class='top-bg' src='/img/bg_top_header.png' mode='aspectFill'> </image>
+  <image   class="userinfo-avatar" src="{{headIc}}" background-size="cover"/>
+		<text class="userinfo-nickname">{{ loginState }}</text>
+	</view>
+  <view class='wide-line'/>
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}" wx:key="index" >
+        <view class="weui_cell" bindtap='onItemClick' data-id='{{index}}'>
+          <image src="{{item.icon}}"  class="mark-img"></image>
+            <view class="weui_cell_bd">
+                <view class="weui_cell_bd_p"> {{item.text}} </view>
+            </view>
+            <view wx:if="{{item.hint}}" class="badge">{{item.hint}}</view>
+            <image  wx:if="{{item.isDetail}}" src="/img/ic_detail.png"  class="badge-img"></image>
+          
+            <view class="with_sarrow"></view>
+        </view>
+        <view class='line'/>
+    </block>
+  </view>
+</view>

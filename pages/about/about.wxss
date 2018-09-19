@@ -1,0 +1,102 @@
+/* pages/about/about.wxss */
+
+.logo {
+  width: 100%;
+  height: 300rpx;
+}
+
+.txt {
+  width: 100%;
+  font-size: 34rpx;
+  margin-top: 30rpx;
+  display: flex;
+  padding-top: 20rpx;
+  padding-left: 40rpx;
+  color: #333;
+  padding-bottom: 20rpx;
+  background-color: whitesmoke;
+}
+
+.desc {
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  color: #666;
+  padding: 0 20rpx;
+  letter-spacing: 5rpx;
+  line-height: 50rpx;
+  text-indent: 30rpx;
+}
+
+.weui_cell {
+  position: relative;
+  display: flex;
+  padding: 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 3rpx solid whitesmoke;
+}
+
+.weui_cell_hd {
+  display: inline-block;
+  width: 60rpx;
+  margin-right: 5px;
+}
+
+.weui_cell_hd image {
+  width: 100%;
+  height: 60rpx;
+  vertical-align: -2px;
+}
+
+.info_list {
+  width: 100%;
+}
+
+.weui_cell_bd {
+  display: inline-block;
+}
+
+.title {
+  font-size: 14px;
+  margin-left: 20rpx;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 40rpx;
+  height: 15px;
+  color: #666;
+  line-height: 15px;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.with_arrow {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.erweima {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 50rpx;
+}
+.ic{
+  width: 40rpx;
+  height: 40rpx;
+}
+.center-txt{
+  display: flex;
+  text-align: center;
+  color: #666;
+  font-size: 30rpx;
+  margin-bottom: 100rpx;
+}

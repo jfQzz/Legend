@@ -1,0 +1,272 @@
+/* pages/history/history.wxss */
+page{
+  height: 100%;
+}
+.contain {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+  background-color: white;
+}
+
+.withAnimate {
+  transition: all 100ms ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+
+.scroll-gv {
+  margin-top: 30rpx;
+}
+
+tab-bar {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.tab-gv {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.tab-active {
+  color: #2d80ff;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16rpx;
+  padding-bottom: 20rpx;
+}
+
+.under-line {
+  position: absolute;
+  top: 70rpx;
+  height: 6rpx;
+  border-radius: 3rpx;
+  background-color: #2d80ff;
+}
+
+.scroll-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #e7eaef;
+}
+
+.stv-container .scroll-view .scroll-view-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}
+
+.stv-container .scroll-view .scroll-view-wrapper .one-scene {
+  height: 100%;
+}
+
+.one-scene txt {
+  display: flex;
+  justify-content: center;
+  padding-top: 200rpx;
+}
+
+.scroll {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.select-gr {
+  display: flex;
+  width: 92%;
+  background-color: white;
+  margin-left: 4%;
+  margin-right: 4%;
+  margin-top: 4%;
+  height: 200rpx;
+  flex-direction: row;
+  border:  1rpx solid #eee;
+  border-radius: 5rpx;
+    box-shadow: 1rpx 1rpx 2rpx #eee;
+
+}
+
+.pic-gv {
+  width: 35%;
+  height: 100%;
+  display: block;
+}
+
+.pic {
+  width: 33%;
+  height: 180rpx;
+  margin-top: 10rpx;
+  margin-left: 2%;
+}
+
+.pic-mark {
+  position: absolute;
+  left: 4%;
+  color: white;
+  padding: 5rpx;
+  background-color: rgba(50, 110, 150, 0.473);
+  font-size: 26rpx;
+  height: 40rpx;
+}
+
+.item-info {
+  width: 61%;
+  height: 100%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.amt {
+  margin-top: 5rpx;
+  font-size: 36rpx;
+  color: #fd6155;
+}
+
+.item-end-time {
+  font-size: 26rpx;
+  position: absolute;
+  color: #666;
+  right: 6%;
+  margin-top: 7rpx;
+}
+
+.info-gr {
+  display: flex;
+  width: 100%;
+  margin-top: 10rpx;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+}
+
+.info-gr-small {
+  display: flex;
+  width: 100%;
+  margin-top: 5rpx;
+  flex-direction: row;
+}
+
+.item-check-time {
+  margin-top: 7rpx;
+  font-size: 26rpx;
+  color: gray;
+}
+
+.end-mark {
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  background-color: whitesmoke;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  margin-top: 4%;
+}
+
+.black_line {
+  width: 26%;
+  height: 3rpx;
+  margin: 5% auto;
+  background-color: gainsboro;
+}
+
+.txt-end {
+  font-size: 26rpx;
+  color: gainsboro;
+}
+
+.end-write {
+  width: 100%;
+  height: 100rpx;
+}
+
+.empty {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty-img {
+  width: 400rpx;
+}
+
+.empty-hint {
+  margin-top: 30rpx;
+  color: #999;
+}
+
+.tab-gr {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  height:80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  align-items: center;
+  background-color: #e5f2f9;
+  border-radius: 40rpx;
+  border-width: 0;
+}
+
+.tab-item-select {
+  width: 50%;
+  height: 100%;
+  background-color: #2d80ff;
+  color: white;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  border-width: 0;
+}
+
+.tab-item-normal {
+  width: 50%;
+  height: 100%;
+  color: #007cc2;
+  text-align: center;
+  line-height: 80rpx;
+}
+.top-space{
+  width: 100%;
+  height: 30rpx;
+  border: 3rpx solid #f8f8f8;
+    border-width: 3rpx 0rpx 0rpx 0rpx; 
+}
+

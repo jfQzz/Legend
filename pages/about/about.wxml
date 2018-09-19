@@ -1,0 +1,18 @@
+<!--pages/about/about.wxml-->
+<view class='container'>
+  <image class="logo" src='/img/banner_3.png'></image>
+  <text class='txt'>平台简介</text>
+  <text class='desc'>票速查是聚萤金链平台旗下一款针对票据买卖双方提供专业、安全、便捷的票据信息撮合服务的产品，该产品通过GPS、OCR、大数据匹配等技术提供票据询价、票据报价、票据信息查询等在线服务功能，帮助企业低成本获取优质融资渠道，同时让买方高效率的获取精准票源客户。</text>
+  <text class='txt'>联系方式</text>
+  <view class="info_list">
+    <block wx:for="{{userListInfo}}" wx:key="none">
+        <view class="weui_cell">
+            <image class='ic' src="{{item.icon}}"></image>
+                <view class="title"> {{item.text}} </view>
+            <view  class="badge">{{item.hint}}</view>
+        </view>
+    </block>
+  </view>
+  <image class="erweima" src='/img/ic_code.png'></image>
+  <text class='center-txt'>关注聚萤金链公众号</text>
+</view>

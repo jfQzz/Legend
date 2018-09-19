@@ -1,0 +1,41 @@
+<!--pages/history/history.wxml-->
+<view class='contain'>
+
+<view class='top-space'></view>
+<view class='tab-gr'>
+            <view class="{{activeTab==0? 'tab-item-select' : 'tab-item-normal' }}" data-index="0 " bindtap="handlerTabTap">银票</view>
+            <view class="{{activeTab==1? 'tab-item-select' : 'tab-item-normal' }}" data-index="1" bindtap="handlerTabTap">商票</view>
+          </view>
+
+  <view class='scroll-gv'>
+    <block wx:if="{{list.length != 0}}" wx:for="{{list}}" wx:key="index">
+      <view class='select-gr'>
+
+        <image class='pic' src="{{item.uuid}}" data-url='{{item.uuid}}' bindtap='onImgClick'></image>
+        <text class="pic-mark ">{{item.billMedia == 1?"电票 ":"纸票 "}}</text>
+        <view class='item-info'>
+          <view class='item-title'>{{item.billBank}}</view>
+          <view class='item-check-time'>询价时间：{{item.createDate}}</view>
+
+      
+            <view class='amt'>{{item.billAmt.lemgth == 0?"无":item.billAmt+"万元"}}</view>
+
+          <view class='info-gr-small'>
+            <view class='item-check-time'>{{item.dueDate}} 到期</view>
+            <view class='item-end-time'>{{item.remainDay}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='end-mark' wx:if="{{list.length==(index+1)}}">
+        <view class='black_line' />
+        <text class='txt-end'>{{endHint}}</text>
+        <view class='black_line' />
+      </view>
+    </block>
+  </view>
+  <!-- </scroll-view> -->
+  <view wx:if="{{list.length == 0}}" class='empty'>
+    <image class='empty-img' src='/img/ic_list_empty.png' mode='widthFix'></image>
+    <text class='empty-hint'>暂无票据信息</text>
+  </view>
+</view>

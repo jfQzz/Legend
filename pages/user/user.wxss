@@ -1,0 +1,116 @@
+/* pages/user/user.wxss */
+
+.contain {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.top-bg {
+  width: 100%;
+  height: 360rpx;
+  overflow: visible;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 360rpx;
+}
+
+.userinfo-avatar {
+  width: 130rpx;
+  height: 130rpx;
+  margin-top: -280rpx;
+  border-radius: 50%;
+  overflow: visible;
+}
+
+.userinfo-nickname {
+  margin-top: 40rpx;
+  color: white;
+  border: #fff 2rpx solid;
+  padding: 3rpx 40rpx;
+  border-radius: 40rpx;
+  font-size: 36rpx;
+  overflow: visible;
+}
+
+.weui_cell {
+  position: relative;
+  display: flex;
+  padding: 15px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.line {
+  width: 100%;
+  height: 3rpx;
+  margin-left: 80rpx;
+  background-color: whitesmoke;
+}
+
+.weui_cell_hd {
+  display: inline-block;
+  width: 20px;
+  margin-right: 5px;
+}
+
+.weui_cell_hd image {
+  width: 100%;
+  height: 20px;
+  vertical-align: -2px;
+}
+
+.weui_cell_bd {
+  display: inline-block;
+}
+
+.weui_cell_bd_p {
+  font-size: 14px;
+  color: #333;
+}
+
+.badge {
+  position: absolute;
+  top: 18px;
+  right: 30rpx;
+  height: 15px;
+  line-height: 15px;
+  color: #333;
+  text-align: center;
+  font-size: 30rpx;
+}
+
+.badge-img {
+  position: absolute;
+  right: 30rpx;
+  width: 16px;
+  height: 16px;
+}
+
+.with_arrow {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.mark-img {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.wide-line{
+  width: 100%;
+  height: 15rpx;
+  background-color: whitesmoke;
+}

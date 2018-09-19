@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/user/user",
+    "pages/history/history",
+    "pages/login/login",
+    "pages/about/about"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "票据查询",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#666",
+    "selectedColor": "#007cc2",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "询价",
+        "iconPath": "img/ic_search_normal.png",
+        "selectedIconPath": "img/ic_search_select.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "img/ic_mine_normal.png",
+        "selectedIconPath": "img/ic_mine_select.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
